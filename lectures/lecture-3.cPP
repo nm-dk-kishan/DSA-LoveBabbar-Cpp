@@ -83,10 +83,10 @@ int main(){
   // }
   
   //8.
-  int n;
-  cout << "Enter the number: ";
-  cin >> n;
-  int sum = 0;
-  while(n > 0){
-  int digit =;
+  // int n;
+  // cout << "Enter the number: ";
+  // cin >> n;
+  // int sum = 0;
+  // while(n > 0){
+  // int digit =;
 }
