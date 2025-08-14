@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <cmath>
 using namespace std;
 
 int main(){
@@ -135,5 +137,80 @@ int main(){
   // }
 
   //7. Convert Binary to Decimal (Manual conversion using powers of 2)
+  // int n;
+  // cout << "Enter the number : ";
+  // cin >> n;
+
+  // int s = to_string(n).size();
+
+  // int number = 0;
+  // int i = 0;
   
+  // while(n != 0){
+  //   int num = n % 10;
+  //   if(num == 1){
+  //     number = number + pow(2,i);
+  //   }
+  //   n = n / 10;
+  //   i++;
+  // }
+  // cout << number;
+
+  //8. Check Palindrome Number (e.g., 121 → Yes, 123 → No)
+  // int n,org,rev = 0;
+  // cout << "Enter the number : ";
+  // cin >> n;
+
+  // org = n;
+
+  // while(n != 0){
+  //   int num = n % 10;
+  //   rev = rev * 10 + num;
+  //   n = n/ 10;
+  // }
+  // if(org == rev){
+  //   cout << "Palindrome Number";
+  // }
+  // else{
+  //   cout << "Not Palindrome Number";
+  // }
+
+  //9. Simple Calculator using switch-case (Addition, Subtraction, Multiplication, Division)
+  int n1,n2;
+  char op;
+  cout << "Enter the 1st number: ";
+  cin >> n1;
+  cout << endl << "Enter the 2nd number: ";
+  cin >> n2;
+
+  cout << "Enter the opration: ";
+  cin >> op;
+
+  switch (op)
+  {
+  case '+' : 
+    cout << n1 + n2;
+    break;
+
+  case '-':
+    cout << n1 - n2;
+    break;
+
+  case '*':
+    cout << n1 * n2;
+    break;
+  
+  case '/' :
+    cout << n1 / n2;
+    break;
+
+  case '%' :
+    cout << n1 % n2;
+    break;
+  
+  default:
+  cout << "Invalid opration";
+   break;
+  }
+
 }
