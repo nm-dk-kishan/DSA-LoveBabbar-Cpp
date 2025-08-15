@@ -176,41 +176,59 @@ int main(){
   // }
 
   //9. Simple Calculator using switch-case (Addition, Subtraction, Multiplication, Division)
-  int n1,n2;
-  char op;
-  cout << "Enter the 1st number: ";
-  cin >> n1;
-  cout << endl << "Enter the 2nd number: ";
-  cin >> n2;
+  // int n1,n2;
+  // char op;
+  // cout << "Enter the 1st number: ";
+  // cin >> n1;
+  // cout << endl << "Enter the 2nd number: ";
+  // cin >> n2;
 
-  cout << "Enter the opration: ";
-  cin >> op;
+  // cout << "Enter the opration: ";
+  // cin >> op;
 
-  switch (op)
-  {
-  case '+' : 
-    cout << n1 + n2;
-    break;
+  // switch (op)
+  // {
+  // case '+' : 
+  //   cout << n1 + n2;
+  //   break;
 
-  case '-':
-    cout << n1 - n2;
-    break;
+  // case '-':
+  //   cout << n1 - n2;
+  //   break;
 
-  case '*':
-    cout << n1 * n2;
-    break;
+  // case '*':
+  //   cout << n1 * n2;
+  //   break;
   
-  case '/' :
-    cout << n1 / n2;
-    break;
+  // case '/' :
+  //   cout << n1 / n2;
+  //   break;
 
-  case '%' :
-    cout << n1 % n2;
-    break;
+  // case '%' :
+  //   cout << n1 % n2;
+  //   break;
   
-  default:
-  cout << "Invalid opration";
-   break;
-  }
+  // default:
+  // cout << "Invalid opration";
+  //  break;
+  // }
 
+  //10. Find the 2nd largest element in an array without sorting.
+  // int s=0;
+  // int f = 0;
+  // int arr[] = {2,3,5,6,1};
+  // int n = sizeof(arr) / sizeof(arr[0]);
+  // for(int i=0;i<n;i++){
+  //   if(arr[i] > f){
+  //     s = f;
+  //     f = arr[i];
+  //   }
+  //   else if(arr[i] < f && arr[i]>s){
+  //     s = arr[i];
+  //   }
+  // }
+  // cout << f << endl << s <<endl;
+
+  //11. Print Pascal’s Triangle up to n rows.
+  
 }
