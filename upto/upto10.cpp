@@ -231,4 +231,5 @@ int main(){
 
   //11. Print Pascal’s Triangle up to n rows.
   
+  
 }
