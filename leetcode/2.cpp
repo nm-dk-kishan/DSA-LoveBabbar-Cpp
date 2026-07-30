@@ -1,27 +1,41 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
 class Solution {
 public:
-    vector<int> shuffle(vector<int>& nums, int n) {
-        vector<int> ans;
-        ans.reserve(2*n);
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* dummy = new ListNode(0);
+        ListNode* temp = dummy;
 
-        for(int i =0;i<n;i++){
-            ans.push_back(nums[i]);
-            ans.push_back(nums[i+n]);
+        int carry=0;
+
+        while(l1!=NULL || l2!=NULL || carry!=0){
+            int sum = carry;
+
+            if(l1!=NULL){
+                sum+=l1->val;
+                l1 = l1->next;
+            }
+
+            if(l2!=NULL){
+                sum+=l2->val;
+                l2 =l2->next;
+            }
+
+            carry = sum/10;
+
+            ListNode* newnode = new ListNode(sum%10);
+            temp->next = newnode;
+            temp = temp->next;
         }
 
-        return ans;
-
-        //OR
-
-        // int p = nums.size();
-        // int first = 0;
-        // int sec = n;
-
-        // vector<int> ans(2*n);
-        // for(int i=0;i<2*n;i += 2){
-        //     ans[i] = nums[first++];
-        //     ans[i+1] = nums[sec++]; 
-        // }
-        // return ans;
+        return dummy->next;
     }
 };
