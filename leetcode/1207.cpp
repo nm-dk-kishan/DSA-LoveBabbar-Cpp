@@ -1,32 +1,40 @@
 class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
-      int n = arr.size();
-        vector<bool> visited(n, false);
-        vector<int> counts;
-
-        // Step 1: Count occurrences
-        for (int i = 0; i < arr.size(); i++) {
-            if (visited[i]) continue;
-
-            int count = 1;
-            for (int j = i + 1; j < arr.size(); j++) {
-                if (arr[i] == arr[j]) {
-                    count++;
-                    visited[j] = true;
-                }
-            }
-            counts.push_back(count);
+        vector<int> vec(2001,0);
+        for(int &x:arr){
+            vec[x+1000]++;
         }
+        sort(vec.begin(),vec.end());
 
-        // Step 2: Check if counts are unique
-        for (int i = 0; i < counts.size(); i++) {
-            for (int j = i + 1; j < counts.size(); j++) {
-                if (counts[i] == counts[j]) {
-                    return false; // duplicate frequency found
-                }
+        for(int i=0;i<2001;i++){
+            if(vec[i]!=0 && vec[i] == vec[i-1]){
+                return false;
             }
         }
-        return true; 
+        return true;
+
+        //OR
+
+
+        // unordered_map<int,int> mp;
+
+        // for(auto &x:arr){
+        //     mp[x]++;
+        // }
+
+        // unordered_set<int> set;
+
+        // for(auto &s:mp){
+
+        //     int freq = s.second;
+
+        //     if(set.find(freq) != set.end()){
+        //         return false;
+        //     }
+        //     set.insert(freq);
+        // }
+
+        // return true;
     }
 };
